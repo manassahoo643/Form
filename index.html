@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="registration-form" id="name"  action="/register" name="registrationForm" method="post" onsubmit="return validateForm()">
+        <div class="form-header" >
+
+
+            <h1>Registration Form</h1>
+        </div>
+        <div class="form-body">
+            <div class="horizontal-group">
+                <div class="group-left" id="fname" >
+                    <label for="fname">First Name:</label>
+                    <input type="text"   class="forminput" name="fname" placeholder="Enter Your First Name"
+                        required><b><span class="formerror"></span></b>
+                </div>
+
+                <div class="group-right" >
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" class="forminput" name="lname" placeholder="Enter Your Last Name"
+                        required><b><span class="formerror"></span></b>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="form-group" id="email">
+                <label for="email">Email*:</label>
+                <input type="email"  class="forminput" name="femail" placeholder="Enter Your Email Address"
+                    required><b><span class="formerror"></span></b>
+
+            </div>
+            <br>
+            <div class="horizontal-group">
+                <div class="group-left"  id="phone">
+                    <label for="phone">Contact Number:</label>
+                    <input type="number"  class="forminput" name="fphone"
+                        placeholder="Enter Yoour Contact Number"><b><span class="formerror"></span></b>
+                </div>
+
+
+                <div class="group-right">
+                    <label for="dob">DOB:</label>
+                    <input type="date" id="dob" class="forminput" name="dob"><b><span class="formerror"></span></b>
+                </div>
+                <br>
+                <div id="address" >
+                    <label for="address">Address:</label>
+                    <textarea name="caddress" class="forminput" cols=" " rows=" "
+                        placeholder="Enter Your Address"></textarea>
+                </div>
+                <br>
+                <div class="horizontal-group">
+                    <div class="group-left" id="cgender">
+                        <label for="gender">Gender:</label>
+                        <br>
+                        <input type="radio" name="gender" id="m" value="male">Male
+                        <br>
+                        <input type="radio" name="gender" id="f" value="female">Female
+                        <br>
+                        <input type="radio" name="gender" id="o" value="other">Other
+                        <br>
+
+                    </div>
+
+                    <div class="group-right">
+
+                        <label for="interest">Area of Interest:</label>
+                        <br>
+                        <input type="checkbox" name="interest" id="">DBMS
+                        <br>
+                        <input type="checkbox" name="interest" id="">DCCN
+                        <br>
+                        <input type="checkbox" name="interest" id="">OS
+                        <br>
+
+
+                    </div>
+                </div>
+                <br>
+
+                <div class="horizontal-group">
+                    <br>
+                    <div class="group-left">
+                        <label for="state" id="state">Select your State:</label><br></br>
+                        <select name="state" id="">
+                            <option value="SELECT" disabled>--SELECT--</option>
+                            <option value="OD">Odisha</option>
+                            <option value="AP">Andra pradesh</option>
+                            <option value="UP">Uttar pradesh</option>
+                            <option value="MP">Madhy pradesh</option>
+                            <option value="CG">Chhatisgarh</option>
+                            <option value="WB">West Bengal</option>
+
+
+
+                        </select>
+
+                    </div>
+                    <div class="group-right">
+                        <label for="rating" class="level-title">Rate your Skill:</label>
+                        <input type="range" min="2" max="10" step="" class="forminput" id="rating">
+
+
+                    </div>
+
+                    <div class="horizontal-group">
+                        <div class="group-left">
+                            <label for="choice-file">Upload your Pic:</label>
+                            <input type="file" id="choice-file" size="80" class="forminput"><b><span class="formerror"></span></b>
+                        </div>
+
+
+                        <div class="group-right">
+                            <label for="age" class="level-title">Age:</label>
+                            <input type="number" min="18" max="80" class="forminput" required>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br><br><br><br>
+        <div class="form-footer">
+
+            <span>* required</span>
+            <button type="submit" class="btn">SUBMIT</button>
+            <button type="reset" class="btn">RESET</button>
+
+        </div>
+
+    </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
